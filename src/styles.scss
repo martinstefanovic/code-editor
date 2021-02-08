@@ -1,1 +1,183 @@
-/* You can add global styles to this file, and also import other style files */
+// *IMPORTS
+/* #region Imports */
+@import "variables";
+// @import 'utility';
+// @import 'buttons';
+/* #endregion Imports */
+
+// *GLOBAL
+/* #region Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: transparent;
+  background: transparent;
+}
+
+button:focus,
+a:focus, li:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+ul,ol{
+  list-style-position: inside;
+}
+
+#main-app {
+  font-family: "Rubik", sans-serif;
+}
+
+/* #endregion Global */
+
+.code-editor {
+  width: 100%;
+  height: 100%;
+}
+
+.main-content {
+  width: 100%;
+  height: 86vh;
+}
+
+
+
+// * Modal style === //
+.p-dialog .p-dialog-header,
+.p-dialog .p-dialog-content,
+.p-dialog .p-dialog-footer{
+  background: $app-bg;
+}
+.p-dialog{
+  border: none;
+}
+
+
+
+// * Editor style === //
+
+.ace_editor {
+  font-family: "Consolas" !important;
+}
+
+.ace-tomorrow-night .ace_gutter,
+.ace-tomorrow-night {
+  background: transparent;
+}
+
+.p-splitter {
+  background: $app-bg;
+  border-radius: 0px;
+  border: none;
+}
+
+.p-splitter .p-splitter-gutter {
+  background: #2c2f34;
+}
+
+.ace-tomorrow-night .ace_marker-layer .ace_active-line,
+.ace-tomorrow-night .ace_gutter-active-line {
+  background: rgba(38, 79, 120, 0.5);
+}
+
+.ace-tomorrow-night .ace_print-margin {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.ace-tomorrow-night .ace_entity.ace_name.ace_tag,
+.ace-tomorrow-night .ace_entity.ace_other.ace_attribute-name,
+.ace-tomorrow-night .ace_meta.ace_tag,
+.ace-tomorrow-night .ace_string.ace_regexp,
+.ace-tomorrow-night .ace_variable {
+  color: #ff6262;
+}
+
+
+
+// * Bottom bar
+.bottom-bar {
+  width: 100%;
+  height: 7vh;
+  background-color: #15141f;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+}
+
+
+// * Top Header
+.top-header {
+  width: 100%;
+  height: 7vh;
+  background-color: #15141f;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.p-badge{
+  min-width: 1rem;
+  height: 1rem;
+  line-height: .9rem;
+  font-size: .6rem;
+}
+
+.code-tab {
+  width: 100%;
+  height: 100%;
+}
+
+.p-tabview{
+  background: $app-bg;
+}
+
+.p-tabview-panels {
+  height: 93%;
+}
+.p-tabview-panel {
+  height: 100%;
+}
+
+.p-tabview .p-tabview-panels {
+  background: $app-bg;
+}
+
+.p-tabview .p-tabview-nav {
+  background: #15141f;
+  border: none;
+}
+
+.p-tabview-title{
+  color: #fff;
+  font-weight: 400;
+  font-size: .9rem;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  background: darken($app-bg, 3%);
+  border: none;
+  border-color: transparent;
+  &:hover {
+    background: #15141f !important;
+  }
+}
+
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  background: $app-bg;
+  border: none;
+  &:hover {
+    background: #15141f;
+  }
+}

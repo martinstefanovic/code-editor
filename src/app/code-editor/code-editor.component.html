@@ -1,0 +1,77 @@
+<main class="code-editor">
+
+<div style="width: 100%; height: 100%;">
+  <as-split direction="horizontal" (dragEnd)="onResizeWindow($event)">
+    <as-split-area [size]="50">
+      <div class="p-col p-p-0 code-tab">
+        <p-tabView styleClass="code-tab" class="code-tab">
+            <p-tabPanel header="index.html" styleClass="code-tab" class="code-tab">
+              <div
+              class="app-ace-editor"
+              #htmlEditor
+              style="width: 100%; height: 100%"
+              ></div>
+            </p-tabPanel>
+            <p-tabPanel header="style.css" styleClass="code-tab" class="code-tab">
+              <div
+              class="app-ace-editor"
+              #cssEditor
+              style="width: 100%; height: 100%"
+              ></div>
+            </p-tabPanel>
+        </p-tabView>
+      </div>
+    </as-split-area>
+    <as-split-area [size]="50">
+      <div class="p-col p-p-0 p-d-flex p-flex-column p-ai-start p-jc-center code-tab">
+        <iframe #idoc id="iframe" style="width: 100%; height: 100%" frameBorder="0">
+        </iframe>
+      </div>
+    </as-split-area>
+  </as-split>
+</div>
+
+  <!-- <p-splitter
+    [style]="{ height: '100%' }"
+    [panelSizes]="[50, 50]"
+    [minSizes]="[40, 0]"
+    styleClass="p-mb-5"
+  >
+
+        <ng-template>
+          <p-splitter [panelSizes]="[50, 50]"  [minSizes]="[0, 50]" (onResizeEnd)="onResizeWindow($event)">
+            <ng-template>
+              <div class="p-col p-p-0">
+                <p-tabView styleClass="code-tab" class="code-tab">
+                    <p-tabPanel header="index.html" styleClass="code-tab" class="code-tab">
+                      <div
+                      class="app-ace-editor"
+                      #htmlEditor
+                      style="width: 100%; height: 100%"
+                      ></div>
+                    </p-tabPanel>
+                    <p-tabPanel header="style.css" styleClass="code-tab" class="code-tab">
+                      <div
+                      class="app-ace-editor"
+                      #cssEditor
+                      style="width: 100%; height: 100%"
+                      ></div>
+                    </p-tabPanel>
+                </p-tabView>
+              </div>
+            </ng-template>
+            <ng-template>
+              <div class="p-col p-p-0 p-d-flex p-flex-column p-ai-start p-jc-center">
+                <iframe #idoc id="iframe" style="width: 100%; height: 100%" frameBorder="0">
+                </iframe>
+              </div>
+            </ng-template>
+          </p-splitter>
+        </ng-template>
+      </p-splitter> -->
+
+</main>
+
+
+<!-- * Bottom bar -->
+<app-bottom-bar></app-bottom-bar>

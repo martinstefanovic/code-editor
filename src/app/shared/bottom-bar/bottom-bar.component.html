@@ -1,0 +1,31 @@
+<div class="bottom-bar">
+  <button pButton pRipple icon="pi pi-info-circle" type="button" (click)="showBasicDialog()" label="Pomoć" class="p-button-secondary p-button-sm"></button>
+  <span><strong>Vežba 7:</strong> Osnove Bootstrap-a</span>
+  <button pButton pRipple icon="pi pi-check" type="button" label="Predaj vežbu" class="p-button-primary p-button-sm"></button>
+</div>
+
+
+<p-dialog header="Pomoć" [(visible)]="displayBasic" [style]="{width: '50vw'}" [baseZIndex]="10000">
+  <h2 class="p-mb-1">What is Bootstrap?</h2>
+  <ul>
+    <li>Bootstrap is a free front-end framework for faster and easier web development</li>
+    <li>Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins</li>
+    <li>Bootstrap also gives you the ability to easily create responsive designs</li>
+  </ul>
+
+  <h2 class="p-mt-3 p-mb-1">Why Use Bootstrap?</h2>
+  <p>Advantages of Bootstrap:</p>
+  <ul>
+    <li><strong>Easy to use:</strong> Anybody with just basic knowledge of HTML and CSS can start using Bootstrap</li>
+    <li><strong>Responsive features:</strong> Bootstrap's responsive CSS adjusts to phones, tablets, and desktops</li>
+    <li><strong>Mobile-first approach:</strong> In Bootstrap, mobile-first styles are part of the core framework</li>
+    <li><strong>Browser compatibility:</strong> Bootstrap 4 is compatible with all modern browsers (Chrome, Firefox, Internet Explorer 10+, Edge, Safari, and Opera)</li>
+  </ul>
+
+  <h2 class="p-mt-3 p-mb-1">Bootstrap 4 CDN</h2>
+  <p>If you don't want to download and host Bootstrap 4 yourself, you can include it from a CDN (Content Delivery Network).</p>
+
+  <ng-template pTemplate="footer">
+      <p-button icon="pi pi-check" (click)="displayBasic=false" label="Zatvori" styleClass="p-button-text"></p-button>
+  </ng-template>
+</p-dialog>
